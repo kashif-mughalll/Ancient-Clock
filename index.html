@@ -9,14 +9,32 @@
 </head>
 <body>
     
-    <div class="container">
-        <div class="clock-dial flex">            
-            <div id="hours-needle"></div>
-            <div id="minute-needle"></div>      
-            <div id="Gear1"></div> 
-            <img id="Dial-img" src="./assets/Clock Dial.png" alt="">
-            <div id="Gear2"></div>
-            <div id="Gear3"></div>
+    <div class="container flex1">
+        <div class="flex" id="circle1">
+            <div class="flex" id="circle2">
+                <div class="clock-dial flex">            
+                    <div id="hours-needle"></div>
+                    <div id="minute-needle"></div>      
+                    <div id="Gear1"></div> 
+                    <img id="Dial-img" src="./assets/Clock Dial.png" alt="">
+                    <div id="Gear2"></div>
+                    <div id="Gear3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Digital flex">
+            <div class="Box flex">
+                <p class="heading" id="Hourss"></p>
+            </div>
+            <p class="para">:</p>
+            <div class="Box flex">
+                <p class="heading" id="Minutes"></p>
+            </div> 
+            <p class="para">:</p>           
+            <div class="Box flex">
+                <p class="heading" id="Seconds"></p>
+            </div>
         </div>
     </div>
 

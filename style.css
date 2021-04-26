@@ -15,6 +15,13 @@ html{
     justify-content: center;
 }
 
+.flex1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
 :root {
     --Dial-Size : 46rem;
     --minute-needle-height : 21rem;
@@ -27,7 +34,7 @@ html{
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
-    padding: 5rem;
+    padding: 3rem;
 }
 
 
@@ -41,14 +48,29 @@ html{
     background: white;
 }
 
+#circle1{
+    height: 50rem;
+    width: 50rem;
+    background-color: #ddd;
+    border-radius: 50%;
+    box-shadow: 1rem 1rem 1rem -0.5rem #aaa;
+}
+
+#circle2{
+    height: 48rem;
+    width: 48rem;
+    border-radius: 50%;
+    background: #eee;
+    background-size: 100% 100%;    
+}
+
 #Dial-img{
-    width: var(--Dial-Size);
-    height: var(--Dial-Size);
+    width: 101%;
+    height: 101%;
     z-index: 100;
 }
 
 #minute-needle{
-    /* // 427 * 151 */
     height: var(--minute-needle-height);
     width: var(--minute-needle-width);    
     background: url("./assets//Long\ Needle.png");
@@ -62,12 +84,11 @@ html{
 
 
 #hours-needle{
-    /* // 427 * 151 */
     height: var(--hours-needle-height);
     width: var(--hours-needle-width);    
     background: url("./assets/Short\ needle.png");
     background-size: 100% 100%;
-    z-index: 22;
+    z-index: 100;
     position: absolute;
     top: 21.8rem;
     left: 20rem;
@@ -84,6 +105,7 @@ html{
     width: 18rem;
     background: url("./assets//Gear11.png");
     background-size: 100% 100%;
+    opacity: 80%;
 }
 
 
@@ -95,7 +117,7 @@ html{
     height: 21rem;
     width: 21rem;
     background: url("./assets//Gear11.png");
-    background-size: 100% 100%;
+    background-size: 100% 100%;    
 }
 
 #Gear3{
@@ -108,7 +130,36 @@ html{
     background: url("./assets//Gear3.png");
     background-size: 100% 100%;
     animation: Rotation 12s infinite linear;
+    opacity: 80%;
 }
+
+.Digital{
+    position: relative;
+    height: 8rem;
+    width: 46rem;
+    margin: 1rem 0;
+}
+
+.Box{
+    height: 6.5rem;
+    background-color: #ddd;
+    width: 5.5rem;
+    margin: 0 0.7rem;
+    border-radius: 0.8rem;
+    box-shadow: 0.5rem 0.5rem 1rem -0.5rem #999;
+}
+
+.heading{
+    font-size: 2.4rem;
+    color: #555;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.para{
+    font-size: 3.5rem;
+    color: #888;
+}
+
 
 
 @keyframes Rotation {

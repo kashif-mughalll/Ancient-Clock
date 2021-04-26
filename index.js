@@ -15,13 +15,15 @@ setInterval(() => {
     var Arr = Time.split(':');
     SetHours(Arr[0]);
     SetMinutes(Arr[1]);
-
+    document.getElementById('Hourss').innerHTML = Arr[0];
+    document.getElementById('Minutes').innerHTML = Arr[1];
+    document.getElementById('Seconds').innerHTML = Arr[2].substr(0,2);
     Gear1.style.transform = `rotate(${index}deg)`;
     Gear2.style.transform = `rotate(${-index}deg)`;
     index = index + 6;
 
     Seconds++;
-}, 1000);
+}, 998);
 
 
 
