@@ -2,9 +2,7 @@ var Minute_Needle = document.getElementById('minute-needle');
 var Hours_Needle  = document.getElementById('hours-needle');
 var Gear1  = document.getElementById('Gear1');
 var Gear2  = document.getElementById('Gear2');
-var audio = new Audio("./assest/Clock Sound.mp3");
-
-
+sound("./assets/Clock Sound.mp3");
 
 // Current time Arr[0] Hours and Arr[1] for minue
 
@@ -12,7 +10,7 @@ var index = 0;
 var Seconds = 0;
 
 setInterval(() => {   
-    audio.play();
+    play();
     var Time = new Date().toLocaleTimeString();
     var Arr = Time.split(':');
     SetHours(Arr[0]);
@@ -35,9 +33,24 @@ function SetHours(Hours){
 }
 
 
-function SetMinutes(Minutes){
-    
+function SetMinutes(Minutes){    
     var Minutes =  parseInt(Minutes);
     Minute_Needle.style.transform = `rotate(${(Minutes*6)+180}deg)`;
+}
+
+
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+      this.sound.play();
+    }
+    this.stop = function(){
+      this.sound.pause();
+    }
 }
 
