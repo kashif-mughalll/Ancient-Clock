@@ -3,8 +3,11 @@ var Hours_Needle  = document.getElementById('hours-needle');
 var Gear1  = document.getElementById('Gear1');
 var Gear2  = document.getElementById('Gear2');
 sound("./assets/Clock Sound.mp3");
+var Time = new Date().toLocaleTimeString();
+var Arr = Time.split(':');
+SetHours(Arr[0]);
+SetMinutes(Arr[1]);
 
-// Current time Arr[0] Hours and Arr[1] for minue
 
 var index = 0;
 var Seconds = 0;
